@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+{% if st=="1" %}
+
+<span style="color:#003399">Student: {{data[1]}} [{{data[13]}}], Present</span>
+
+
+
+{% elif st=="2" %}
+<span style="color:#FF0000">Impersonation Student!!</span>
+		{% if sms=="1" %}
+		<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name=HOD&mess={{mess}}&mobile={{mobile}}" width="5" height="5" frameborder="0"></iframe>
+		{% endif %}
+{% endif %}
+
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/process1?vid={{vid}}&regno={{regno}}';
+}, 15000);
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
